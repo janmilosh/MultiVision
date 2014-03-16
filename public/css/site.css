@@ -1,0 +1,63 @@
+body {
+  padding-top: 61px;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+.container-fluid {
+  width: 970px;
+  max-width: 100%;
+}
+.navbar-inverse,
+.navbar-collapse {
+  background-color: #2fcaa5;
+  background-image: none;
+  border-color: #2fcaa5;
+}
+.navbar-inverse .navbar-brand,
+.navbar-inverse .navbar-nav > li > a {
+  text-shadow: none;
+}
+.navbar-inverse .navbar-brand {
+  color: #fff;
+}
+.navbar-inverse .navbar-nav > li > a {
+  color: #fff;
+}
+.navbar-brand {
+  height: auto;
+}
+.navbar-header a.navbar-brand {
+  margin-top: -10px;
+  margin-bottom: -17px;
+}
+.navbar-header a.navbar-brand h6 {
+  color: #eee;
+}
+.jumbotron {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+.panel-primary > .panel-heading {
+  background-color: #444;
+  border-color: #444;
+  background-image: none;
+}
+.panel-primary {
+  border-color: #444;
+}
+footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+footer p {
+  padding-top: 15px;
+  border-top: 1px solid #d7e0e2;
+}
