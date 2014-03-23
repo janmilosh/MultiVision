@@ -17,9 +17,9 @@ h6 {
 }
 .navbar-inverse,
 .navbar-collapse {
-  background-color: #2fcaa5;
+  background-color: #13987e;
   background-image: none;
-  border-color: #2fcaa5;
+  border-color: #13987e;
 }
 .navbar-inverse .navbar-brand,
 .navbar-inverse .navbar-nav > li > a {
@@ -46,6 +46,12 @@ h6 {
 }
 .navbar-form button {
   margin-left: 10px;
+}
+.toast-top-right {
+  top: 70px;
+}
+.toast-success {
+  background-color: #13987e;
 }
 .jumbotron {
   padding-left: 60px;
