@@ -16,22 +16,6 @@ module.exports = function() {
 	  }
 	));
 
-	// passport.serializeUser(function(user, done) {
-	//   if (user) {
-	//     done(null, user.id);
-	//   }
-	// });
-
-	// passport.deserializeUser(function(id, done) {
-	//   if (id) {
-	//     User.findById(id, function(err, user) {
-	//       return done(null, user);
-	//     });
-	//   } else {
-	//     return done(null, false);
-	//   }
-	// });
-
 	passport.serializeUser(function(user, done) {
 	  if (user) {
 	    done(null, user._id);
