@@ -3,8 +3,8 @@ angular.module('app').controller('mvSignupCtrl', function($scope, mvUser, mvNoti
 		var newUserData = {
 			username: $scope.email,
 			password: $scope.password,
-			firstname: $scope.fname,
-			lastname: $scope.lname
+			firstName: $scope.fname,
+			lastName: $scope.lname
 		};
 		mvAuth.createUser(newUserData).then(function() {
 			mvNotifier.notify('User account created!');
