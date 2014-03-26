@@ -9,8 +9,7 @@ exports.getUsers = function(req, res) {
 
 exports.createUser = function(req, res, next) {
 	var userData = req.body;
-	console.log('req', req);
-	userData.username = username.toLowerCase();
+	userData.username = userData.username.toLowerCase();
 	userData.salt = encrypt.createSalt();
 	userData.hashed_pwd = encrypt.hashPwd(userData.salt, userData.password);
 	User.create(userData, function(err,user) {
@@ -18,7 +17,7 @@ exports.createUser = function(req, res, next) {
 			if(err.toString().indexOf('E11000') > -1) {
 				err = new Error('Duplicate Username');
 			}
-			res.status(4000);
+			res.status(400);
 			return res.send({reason:err.toString()});
 		}
 		req.logIn(user, function(err) {
