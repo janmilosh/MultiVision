@@ -1,9 +1,9 @@
-.container
+.container.padding-top-med
 	.pull-right
 		form.form-inline
 			.form-group
 				input.form-control(ng-model="searchText", placeholder="Filter")
-			.form-group
+			.form-group.margin-left-med
 				select.form-control(ng-model="sortOrder", ng-options="item.value as item.text for item in sortOptions")
 	table.table.table-hover.table-striped.table-condensed
 		thead
@@ -14,5 +14,3 @@
 			tr(ng-repeat="course in courses | filter:searchText | orderBy:sortOrder")
 				td {{course.title}}
 				td {{course.published | date}}
-
-				<select ng-model="color" ng-options="c.name for c in colors">

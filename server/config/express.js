@@ -11,17 +11,18 @@ module.exports = function(app, config) {
     app.set('views', config.rootPath + '/server/views');
     app.set('view engine', 'jade');
     app.use(express.logger('dev'));
+    app.use(stylus.middleware(
+      {
+        src:  config.rootPath + '/public',
+        compile: compile
+      }
+    ));
     app.use(express.static(config.rootPath + '/public'));
     app.use(express.cookieParser());
     app.use(express.bodyParser());
     app.use(express.session({secret: 'multi vision unicorns'}));
     app.use(passport.initialize());
     app.use(passport.session());
-    app.use(stylus.middleware(
-      {
-      	src:  config.rootPath + '/public',
-      	compile: compile
-      }
-    ));
+    
   });
 }
